@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export UPSTREAM_VERSION = 5.1.1.8
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	make -C src -f ../debian/Makefile
+
+override_dh_auto_clean:
+	dh_auto_clean
+	make -C src clean -f ../debian/Makefile

@@ -1,0 +1,29 @@
+Source: android-platform-external-libselinux
+Section: libs
+Priority: optional
+Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
+Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
+Build-Depends: debhelper (>=9),
+               dh-exec,
+               libpcre3-dev
+Standards-Version: 3.9.6
+Vcs-Git: https://anonscm.debian.org/android-tools/android-platform-external-libselinux.git
+Vcs-Browser: http://anonscm.debian.org/cgit/android-tools/android-platform-external-libselinux.git
+
+Package: android-libselinux
+Section: libs
+Architecture: linux-any
+Depends: libpcre3,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: SELinux for Android
+ This library is only used by Android SDK currently.
+
+Package: android-libselinux-dev
+Section: libdevel
+Architecture: linux-any
+Depends: ${misc:Depends}
+Description: SELinux for Android - Development files
+ This library is only used by Android SDK currently.
+ .
+ This package provides the development files.
