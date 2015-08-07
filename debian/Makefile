@@ -7,16 +7,16 @@ SOURCES = callbacks.c \
           label_file.c \
           label_android_property.c
 OBJECTS = $(SOURCES:.c=.o)
-INCLUDES = -I. -I../include
-LOCAL_CFLAGS = -fPIC -c -DHOST
-LOCAL_LDFLAGS = -fPIC -shared -rdynamic -lpthread -lpcre
+CFLAGS += -fPIC -c -DHOST
+CPPFLAGS +=  -I../include
+LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.5 -lpcre
 
 build: $(OBJECTS)
-	cc $^ -o $(NAME).so.$(UPSTREAM_VERSION) -Wl,-soname,$(NAME).so.5 $(LDFLAGS) $(LOCAL_LDFLAGS)
+	cc $^ -o $(NAME).so.$(UPSTREAM_LIBVERSION) $(LDFLAGS)
 	ar rs $(NAME).a $^
 
 clean:
 	rm -f *.so.* *.a *.o
 
 $(OBJECTS): %.o: %.c
-	cc $< -o $@ $(CFLAGS) $(CPPFLAGS) $(INCLUDES) $(LOCAL_CFLAGS)
+	cc $< -o $@ $(CFLAGS) $(CPPFLAGS)
