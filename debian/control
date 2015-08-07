@@ -7,6 +7,7 @@ Build-Depends: debhelper (>=9),
                dh-exec,
                libpcre3-dev
 Standards-Version: 3.9.6
+Homepage: https://android.googlesource.com/platform/external/libselinux
 Vcs-Git: https://anonscm.debian.org/android-tools/android-platform-external-libselinux.git
 Vcs-Browser: http://anonscm.debian.org/cgit/android-tools/android-platform-external-libselinux.git
 
