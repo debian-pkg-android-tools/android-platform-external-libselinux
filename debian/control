@@ -12,10 +12,8 @@ Vcs-Git: https://anonscm.debian.org/android-tools/android-platform-external-libs
 Vcs-Browser: http://anonscm.debian.org/cgit/android-tools/android-platform-external-libselinux.git
 
 Package: android-libselinux
-Section: libs
 Architecture: linux-any
-Depends: libpcre3,
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${shlibs:Depends}
 Description: Security-Enhanced Linux for Android
  This library provides an API for SELinux applications to get and set process
@@ -27,7 +25,7 @@ Description: Security-Enhanced Linux for Android
 Package: android-libselinux-dev
 Section: libdevel
 Architecture: linux-any
-Depends: ${misc:Depends}
+Depends: android-libselinux (= ${binary:Version}), ${misc:Depends}
 Description: Security-Enhanced Linux for Android - Development files
  This library provides an API for SELinux applications to get and set process
  and file security contexts and to obtain security policy decisions.
