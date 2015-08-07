@@ -17,14 +17,22 @@ Architecture: linux-any
 Depends: libpcre3,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: SELinux for Android
- This library is only used by Android SDK currently.
+Description: Security-Enhanced Linux for Android
+ This library provides an API for SELinux applications to get and set process
+ and file security contexts and to obtain security policy decisions.
+ .
+ This library is an AOSP fork of libselinux, adding features specifically for
+ Android and is intended for Android libraries only.
 
 Package: android-libselinux-dev
 Section: libdevel
 Architecture: linux-any
 Depends: ${misc:Depends}
-Description: SELinux for Android - Development files
- This library is only used by Android SDK currently.
+Description: Security-Enhanced Linux for Android - Development files
+ This library provides an API for SELinux applications to get and set process
+ and file security contexts and to obtain security policy decisions.
+ .
+ This library is an AOSP fork of libselinux, adding features specifically for
+ Android and is intended for Android libraries only.
  .
  This package provides the development files.
