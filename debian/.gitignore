@@ -1,0 +1,8 @@
+*~
+*.debhelper
+*.substvars
+*.log
+files
+tmp/
+android-libselinux-dev/
+android-libselinux/
