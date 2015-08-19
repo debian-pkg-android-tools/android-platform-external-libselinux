@@ -1,5 +1,6 @@
-android-platform-external-libselinux (5.1.1+r8-1) UNRELEASED; urgency=low
+android-platform-external-libselinux (5.1.1+r8-1) unstable; urgency=low
 
+  [ Kai-Chung Yan ]
   * Initial release (Closes: #793611)
 
- -- Kai-Chung Yan <seamlikok@gmail.com>  Sat, 25 Jul 2015 21:28:26 +0800
+ -- Hans-Christoph Steiner <hans@eds.org>  Wed, 19 Aug 2015 13:35:27 +0200
