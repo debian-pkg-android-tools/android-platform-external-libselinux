@@ -1,6 +1,5 @@
 #!/usr/bin/make -f
 
-export UPSTREAM_LIBVERSION = 5.1.1.8
 UPSTREAM_TAG = android-6.0.0_r26
 
 %:

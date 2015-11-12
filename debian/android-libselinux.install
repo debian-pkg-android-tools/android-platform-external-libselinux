@@ -1,1 +1,1 @@
-src/libselinux.so.*     usr/lib/android/
+src/libselinux.so   usr/lib/android

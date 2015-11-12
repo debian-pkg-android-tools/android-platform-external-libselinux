@@ -1,3 +1,0 @@
-#!/usr/bin/dh-exec
-
-usr/lib/android/libselinux.so.${UPSTREAM_LIBVERSION}     usr/lib/android/libselinux.so.5

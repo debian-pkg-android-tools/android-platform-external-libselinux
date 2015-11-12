@@ -9,14 +9,14 @@ SOURCES = callbacks.c \
 OBJECTS = $(SOURCES:.c=.o)
 CFLAGS += -fPIC -c -DHOST
 CPPFLAGS +=  -I../include
-LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.5 -lpcre
+LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so -lpcre
 
 build: $(OBJECTS)
-	cc $^ -o $(NAME).so.$(UPSTREAM_LIBVERSION) $(LDFLAGS)
+	cc $^ -o $(NAME).so $(LDFLAGS)
 	ar rs $(NAME).a $^
 
 clean:
-	rm -f *.so.* *.a *.o
+	rm -f *.so *.a *.o
 
 $(OBJECTS): %.o: %.c
 	cc $< -o $@ $(CFLAGS) $(CPPFLAGS)
