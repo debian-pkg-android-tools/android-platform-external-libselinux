@@ -1,3 +1,9 @@
+android-platform-external-libselinux (6.0.0+r26-1) UNRELEASED; urgency=low
+
+  * New upstream release
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Thu, 12 Nov 2015 11:46:33 +0800
+
 android-platform-external-libselinux (5.1.1+r8-1) unstable; urgency=low
 
   [ Kai-Chung Yan ]
