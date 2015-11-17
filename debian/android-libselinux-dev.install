@@ -1,2 +1,3 @@
-include/*        usr/include/android
-src/libselinux.a usr/lib/android
+*.a       usr/lib/android
+*.so      usr/lib/android
+include/* usr/include/android

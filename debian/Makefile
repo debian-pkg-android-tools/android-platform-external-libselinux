@@ -6,17 +6,20 @@ SOURCES = callbacks.c \
           label.c \
           label_file.c \
           label_android_property.c
+SOURCES := $(foreach source, $(SOURCES), src/$(source))
 OBJECTS = $(SOURCES:.c=.o)
 CFLAGS += -fPIC -c -DHOST
-CPPFLAGS +=  -I../include
-LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so -lpcre
+CPPFLAGS += -Iinclude
+LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.$(ANDROID_SOVERSION) -lpcre
 
 build: $(OBJECTS)
-	cc $^ -o $(NAME).so $(LDFLAGS)
-	ar rs $(NAME).a $^
+	$(CC) $^ -o $(NAME).so.$(ANDROID_LIBVERSION) $(LDFLAGS)
+	$(AR) rs $(NAME).a $^
+	ln -s $(NAME).so.$(ANDROID_LIBVERSION) $(NAME).so
+	ln -s $(NAME).so.$(ANDROID_LIBVERSION) $(NAME).so.$(ANDROID_SOVERSION)
 
 clean:
-	rm -f *.so *.a *.o
+	$(RM) $(OBJECTS) *.so* *.a
 
 $(OBJECTS): %.o: %.c
-	cc $< -o $@ $(CFLAGS) $(CPPFLAGS)
+	$(CC) $< -o $@ $(CFLAGS) $(CPPFLAGS)
