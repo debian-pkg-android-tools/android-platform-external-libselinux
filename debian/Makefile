@@ -10,13 +10,13 @@ SOURCES := $(foreach source, $(SOURCES), src/$(source))
 OBJECTS = $(SOURCES:.c=.o)
 CFLAGS += -fPIC -c -DHOST
 CPPFLAGS += -Iinclude
-LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.$(ANDROID_SOVERSION) -lpcre
+LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.0 -lpcre
 
 build: $(OBJECTS)
 	$(CC) $^ -o $(NAME).so.$(ANDROID_LIBVERSION) $(LDFLAGS)
 	$(AR) rs $(NAME).a $^
 	ln -s $(NAME).so.$(ANDROID_LIBVERSION) $(NAME).so
-	ln -s $(NAME).so.$(ANDROID_LIBVERSION) $(NAME).so.$(ANDROID_SOVERSION)
+	ln -s $(NAME).so.$(ANDROID_LIBVERSION) $(NAME).so.0
 
 clean:
 	$(RM) $(OBJECTS) *.so* *.a
