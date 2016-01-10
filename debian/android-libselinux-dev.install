@@ -1,3 +1,2 @@
-*.a       usr/lib/android
 *.so      usr/lib/android
 include/* usr/include/android
