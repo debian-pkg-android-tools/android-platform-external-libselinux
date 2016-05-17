@@ -6,3 +6,4 @@ files
 tmp/
 android-libselinux-dev/
 android-libselinux/
+debhelper-build-stamp

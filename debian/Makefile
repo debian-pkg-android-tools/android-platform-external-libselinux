@@ -9,7 +9,7 @@ SOURCES = callbacks.c \
 SOURCES := $(foreach source, $(SOURCES), src/$(source))
 CFLAGS += -fPIC -DHOST
 CPPFLAGS += -Iinclude
-LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.0 -lpcre
+LDFLAGS += -shared -Wl,-soname,$(NAME).so.0 -lpcre
 
 build: $(SOURCES)
 	$(CC) $^ -o $(NAME).so.0 $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
