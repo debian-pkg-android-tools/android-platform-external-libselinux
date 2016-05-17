@@ -7,9 +7,9 @@ SOURCES = callbacks.c \
           label_file.c \
           label_android_property.c
 SOURCES := $(foreach source, $(SOURCES), src/$(source))
-CFLAGS += -fPIC -DHOST
+CFLAGS += -DHOST
 CPPFLAGS += -Iinclude
-LDFLAGS += -shared -Wl,-soname,$(NAME).so.0 -lpcre
+LDFLAGS += -fPIC -shared -Wl,-soname,$(NAME).so.0 -lpcre
 
 build: $(SOURCES)
 	$(CC) $^ -o $(NAME).so.0 $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
