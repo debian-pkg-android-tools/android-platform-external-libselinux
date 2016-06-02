@@ -1,10 +1,13 @@
-android-platform-external-libselinux (6.0.1+r16-2) UNRELEASED; urgency=medium
+android-platform-external-libselinux (6.0.1+r16-2) unstable; urgency=medium
 
+  * Team upload.
+
+  [ Kai-Chung Yan ]
   * Install libraries to DEB_HOST_MULTIARCH path
   * Update Standards-Version to 3.9.8 (no changes)
   * d/rules: export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
- -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 17 May 2016 22:41:09 +0800
+ -- Markus Koschany <apo@debian.org>  Thu, 02 Jun 2016 12:29:11 +0200
 
 android-platform-external-libselinux (6.0.1+r16-1) unstable; urgency=medium
 
