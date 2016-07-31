@@ -1,10 +1,14 @@
 android-platform-external-libselinux (6.0.1+r55-1) UNRELEASED; urgency=medium
 
-  * New upstream release.      
+  [ Chirayu Desai ]
+  * New upstream release. (Identical to 6.0.1+r16)
   * debian: Add watch file for usage with uscan
-  * debian/watch: recompress using xz
+  
+  [ Kai-Chung Yan ]
+  * d/rules:  No need to enable all hardening features, pie + bindnow will be
+    default in Stretch
 
- -- Chirayu Desai <chirayudesai1@gmail.com>  Thu, 21 Jul 2016 23:01:17 +0530
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Sun, 31 Jul 2016 15:16:51 +0800
 
 android-platform-external-libselinux (6.0.1+r16-2) unstable; urgency=medium
 
