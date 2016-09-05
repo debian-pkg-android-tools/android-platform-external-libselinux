@@ -5,7 +5,8 @@ SOURCES = callbacks.c \
           init.c \
           label.c \
           label_file.c \
-          label_android_property.c
+          label_android_property.c \
+          label_support.c
 SOURCES := $(foreach source, $(SOURCES), src/$(source))
 CPPFLAGS += -Iinclude -DHOST
 LDFLAGS += -shared -Wl,-soname,$(NAME).so.0 -lpcre
