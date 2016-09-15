@@ -1,4 +1,4 @@
-android-platform-external-libselinux (7.0.0+r1-1) UNRELEASED; urgency=medium
+android-platform-external-libselinux (7.0.0+r1-1) experimental; urgency=medium
 
   * New upstream release
   * Define NDEBUG for C binaries
